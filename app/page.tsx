@@ -8,7 +8,8 @@ import CustomVideoPlayer from "../components/video-player"
 export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
-  const [demoSrc] = useState("https://mqsongdeatils.blob.core.windows.net/seo/29theta.mp4")
+  const [demoSrc] = useState("https://lqfncvigfsrmhownygra.supabase.co/storage/v1/object/public/SEO/29theta.mp4")
+//("https://mqsongdeatils.blob.core.windows.net/seo/29theta.mp4")
   // https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")
 
   const totalDuration = 82 // 1:22 in seconds
