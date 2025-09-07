@@ -8,9 +8,10 @@ import CustomVideoPlayer from "../components/video-player"
 export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
-  const [demoSrc] = useState("https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")
+  const [demoSrc] = useState("https://mqsongdeatils.blob.core.windows.net/seo/29theta.mp4")
+  // https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")
 
-  const totalDuration = 198 // 3:18 in seconds
+  const totalDuration = 82 // 1:22 in seconds
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -121,25 +122,24 @@ export default function HomePage() {
 
       <div className="relative z-10">
         <header className="pt-4 pb-6 px-6 max-w-6xl mx-auto">
-          <div className="flex items-center">
-            {/* <div className="w-24 h-24">
+          {/* <div className="flex items-center"> */}
+            <div className="w-16 h-16">
               <Image
                 src="/logo-290.png"
                 alt="29θ Logo"
-                width={96}
-                height={96}
+                width={80}
+                height={80}
                 className="w-full h-full object-contain"
               />
-            </div> */}
-            <h1 className="font-mono text-3xl font-bold text-foreground ml-4">29(θ)</h1>
+            {/* </div> */}
+            {/* <h1 className="font-mono text-3xl font-bold text-foreground ml-4">29(θ)</h1> */}
           </div>
         </header>
 
         <main className="max-w-5xl mx-auto px-6">
           <div className="text-left mb-12">
             <p className="text-lg md:text-xl text-foreground mb-8 max-w-4xl text-pretty leading-relaxed">
-              At 29θ, our mission is to advance Physical Intelligence — in that not only perceives the world but also acts within it. We explore the intersection of reinforcement learning, physics simulation, and real-world robotics, building systems that can reason, adapt, and learn in complex environments.
-            </p>
+              At 29θ, our mission is to accelerate the future of robotics by making Physical AI accessible and scalable. We provide a platform where teams can train, test, and deploy intelligent robots in hours, not months, through realistic simulation, synthetic data generation, and adaptive learning.</p>
           </div>
 
           <div className="mb-16">
@@ -215,7 +215,7 @@ export default function HomePage() {
                   </svg>
                 </button>
               </div> */}
-              <CustomVideoPlayer src={demoSrc} poster="/video-poster-dark-ui.png" />
+              <CustomVideoPlayer src={demoSrc} poster="/video-thumbnail.png" />
             </div>
           </div>
 
@@ -323,12 +323,26 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mb-16">
-            <Button
+            {/* <Button
               size="lg"
               className="bg-foreground hover:bg-foreground/90 text-background px-8 py-3 text-lg font-mono"
             >
               Explore Platform
-            </Button>
+            </Button> */}
+             <a
+              href="https://cal.com/gaurgulshan"
+              target="_blank"
+              rel="noopener noreferrer"
+              // className="inline-block bg-foreground hover:bg-foreground/90 text-background px-8 py-3 text-lg font-mono rounded-lg transition-colors"
+              className="inline-block px-8 py-3 text-lg font-mono rounded-lg transition-colors text-background"
+              style={{
+                background: "linear-gradient(90deg, #ffde59 0%, #ff914d 100%)",
+                boxShadow: "0 2px 8px 0 rgba(255, 145, 77, 0.15)",
+                color: "#000",
+              }}
+            >
+              Talk to Founder
+            </a>
           </div>
         </main>
 

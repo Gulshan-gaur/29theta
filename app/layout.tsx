@@ -16,9 +16,35 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "290 - Physical Intelligence Robot Training",
+  title: "29θ - Physical Intelligence Robot Training Platform",
   description: "Training Intelligence Through Physical Reality",
-  generator: "v0.app",
+  icons: [
+    { rel: "icon", url: "/icon.png", type: "image/png" },
+    { rel: "shortcut icon", url: "/icon.png", type: "image/png" },
+    { rel: "apple-touch-icon", url: "/icon.png", type: "image/png" },
+  ],
+  openGraph: {
+    title: "29θ - Physical Intelligence Robot Training Platform",
+    description: "Training Intelligence Through Physical Reality",
+    images: [
+      {
+        url: "https://mqsongdeatils.blob.core.windows.net/seo/video-thumbnail.png",
+        width: 512,
+        height: 512,
+        alt: "290 Logo",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+    siteName: "29θ - Physical Intelligence Robot Training Platform",
+  },
+  twitter: {
+    card: "summary",
+    title: "29θ - Physical Intelligence Robot Training Platform",
+    description: "Training Intelligence Through Physical Reality",
+    images: ["https://mqsongdeatils.blob.core.windows.net/seo/video-thumbnail.png"],
+  },
+  metadataBase: new URL("https://29theta.com"),
 }
 
 export default function RootLayout({
@@ -28,6 +54,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Favicon fallback for older browsers */}
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icon.png" type="image/png" />
+        {/* SEO meta tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="robot, AI, training, physical intelligence, robotics, platform" />
+      </head>
       <body className={`font-sans ${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>{children}</body>
     </html>
   )

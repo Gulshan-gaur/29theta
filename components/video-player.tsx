@@ -109,7 +109,7 @@ export default function CustomVideoPlayer({ src, poster, className }: Props) {
           max={duration || 0}
           value={current}
           onChange={(e) => onScrub(Number.parseFloat(e.target.value))}
-          className="range w-full"
+          className="range w-24 xs:w-28 sm:w-44 md:w-56 lg:w-full" // wider on mobile
         />
         <span className="text-xs tabular-nums">{formatTime(duration)}</span>
         <button onClick={toggleMute} className="text-sm text-muted-foreground hover:text-foreground">
@@ -131,7 +131,7 @@ export default function CustomVideoPlayer({ src, poster, className }: Props) {
               setMuted(false)
             }
           }}
-          className="range w-24"
+          className="range w-10 xs:w-12 sm:w-12 md:w-14"
           aria-label="Volume"
         />
         <button onClick={toggleFs} className="text-sm text-muted-foreground hover:text-foreground">
